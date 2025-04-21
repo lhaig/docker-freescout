@@ -49,7 +49,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            docker.io/tiredofit/freescout
+            docker.io/${{ secrets.DOCKERHUB_USERNAME }}/freescout
           tags: |
             type=raw,value=${{ github.event.inputs.php_version }}-alpine
             type=raw,value=latest,enable=${{ github.event.inputs.php_version == '8.3' }}
